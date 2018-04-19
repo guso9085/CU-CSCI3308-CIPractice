@@ -150,14 +150,14 @@ START_TEST(test_2d_area_triangle)
     coord_2d_t a;
     coord_2d_t b;
     coord_2d_t c;
-    
+
     double Area;
 
     a.x = 0;
     a.y = 0;
     b.x = 0;
     c.y = 0;
-    b.y = 4
+    b.y = 4;
     c.x = 4;
     Area = coord_2d_area_triangle(&a, &b, &c);
     ck_assert(Area == 8);
