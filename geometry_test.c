@@ -150,19 +150,27 @@ START_TEST(test_2d_area_triangle)
     coord_2d_t a;
     coord_2d_t b;
     coord_2d_t c;
-    double area;
+    
+    double Area;
 
-    a.x = a.y = b.x = c.y = 0;
-    b.y = c.x = 2;
-    area = coord_2d_area_triangle(&a, &b, &c);
-    ck_assert(area == 2);
+    a.x = 0;
+    a.y = 0;
+    b.x = 0;
+    c.y = 0;
+    b.y = 4
+    c.x = 4;
+    Area = coord_2d_area_triangle(&a, &b, &c);
+    ck_assert(Area == 8);
 
     // Linear points should result in area of 0
-    a.x = a.y = b.y = c.y = 0;
+    a.x = 0;
+    a.y = 0;
+    b.y = 0;
+    c.y = 0;
     b.x = 1;
     c.x = 2;
-    area = coord_2d_area_triangle(&a, &b, &c);
-    ck_assert(area == 0);
+    Area = coord_2d_area_triangle(&a, &b, &c);
+    ck_assert(Area == 0);
 }
 END_TEST
 
