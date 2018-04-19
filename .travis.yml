@@ -4,3 +4,4 @@ addons:
   apt:
     packages:
     - check
+sudo: enabled
